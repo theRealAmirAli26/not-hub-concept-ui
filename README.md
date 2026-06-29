@@ -1,4 +1,4 @@
-# NotHub - UI Concept Design
+# NotHub - UI Concept Design v.1 (not responsive design)
 
 A practice-based front-end design mockup created to explore dark mode layouts, clean typography, and responsive CSS. 
 

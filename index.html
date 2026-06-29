@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotHub</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo"><span>Not</span>Hub</a>
+        <nav>
+            <ul class="navlinks">
+                <li>
+                    <a href="#" class="options">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="options">Trending</a>
+                </li>
+                <li>
+                    <a href="#" class="options">Categories</a>
+                </li>
+                <li>
+                    <a href="#" class="options">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="login-search">
+            <form action="#" autocomplete="off">
+                <input class="search-bar" type="search" name="search" placeholder="Search Content...">
+            </form>
+            <a href="#">
+                <button class="signup-Btn" type="button">Signup</button>
+            </a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="welcome-box">
+            <h1 class="welcome-text">Welcome to NotHub !!!</h1>
+            <p class="subtitle">Discover Amazing Content From Creators Around the World</p>
+            <a href="#">
+                <button class="start-exploring">Start Exploring</button>
+            </a>
+        </section>
+
+        <a href="#">
+            <h2 class="popular-categories">Popular Categories</h2>
+        </a>
+        
+        <section class="popular-categories-box">
+            <div>
+                <a href="#">
+                    <p class="category-img">🎬️</p>
+                    <p class="category-name">Entertainment</p>
+                    <p class="number-of-videos">2,586 videos</p>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <p class="category-img">📚</p>
+                    <p class="category-name">Education</p>
+                    <p class="number-of-videos">1,974 videos</p>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <p class="category-img">🎮</p>
+                    <p class="category-name">Gaming</p>
+                    <p class="number-of-videos">3,437 videos</p>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <p class="category-img">🎵</p>
+                    <p class="category-name">Music</p>
+                    <p class="number-of-videos">4,234 videos</p>
+                </a>
+            </div>
+        </section>
+
+        <a href="#">
+            <h2 class="featured-content">Featured Content</h2>
+        </a>
+
+        <section class="featured-content-box">
+            <div class="content-box">
+                <a href="#">
+                    <div class="content-emoji">▶️</div>
+                    <div class="main-content">
+                        <p class="content-name">Amazing Documentary Series</p>
+                        <p class="about-content1">Duration: 45 min • Views: 125K</p>
+                        <p class="about-content2">Explore the Wonders of Nature in This Captivating Documentary Series That Takes you on a Journey Around the Globe.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="content-box">
+                <a href="#">
+                    <div class="content-emoji">🎭</div>
+                    <div class="main-content">
+                        <p class="content-name">Creative Arts Workshop</p>
+                        <p class="about-content1">Duration: 32 min • Views: 89K</p>
+                        <p class="about-content2">Learn New Artistic Technique and Unleash your Creativity With Professional Artists and Instructors.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="content-box">
+                <a href="#">
+                    <div class="content-emoji">🔬</div>
+                    <div class="main-content">
+                        <p class="content-name">Science Explained</p>
+                        <p class="about-content1">Duration: 28 min • Views: 203K</p>
+                        <p class="about-content2">Complex Scientific Concepts Made Simple And Engaging For Curious Minds of All Ages.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <ul>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#">Terms Of Service</a>
+            </li>
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+            <li>
+                <a href="#">Help Center</a>
+            </li>
+            <li>
+                <a href="#">Community Guidelines</a>
+            </li>
+        </ul>
+        <button class="up-Btn"><i class="fas fa-angle-double-up"></i></button>
+        <p>©2026 TheRealAmir All Rights Reserved</p>
+    </footer>
+
+<script>
+document.querySelector(".up-Btn").addEventListener("click", function(e){
+  e.preventDefault();
+
+  const start = window.scrollY;
+  const duration = 800;
+  const startTime = performance.now();
+
+  function scrollStep(currentTime){
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+
+    window.scrollTo(0, start * (1 - progress));
+
+    if(progress < 1){
+      requestAnimationFrame(scrollStep);
+    }
+  }
+
+  requestAnimationFrame(scrollStep);
+});
+</script>
+
+</body>
+</html>
